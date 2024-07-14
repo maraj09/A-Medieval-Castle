@@ -216,7 +216,7 @@ scene.add(houseRoof);
 const waterMaterial = new THREE.MeshStandardMaterial({
   map: waterTexture,
   transparent: true,
-  opacity: 0.6,
+  opacity: 0.8,
 });
 
 // Water geometry
@@ -226,7 +226,7 @@ const innerWaterGeometry = new THREE.CircleGeometry(100, 64); // Inner circle
 // Create water moat
 const outerWater = new THREE.Mesh(outerWaterGeometry, waterMaterial);
 outerWater.rotation.x = -Math.PI / 2;
-outerWater.position.y = 0;
+outerWater.position.y = .5;
 outerWater.receiveShadow = true;
 scene.add(outerWater);
 
